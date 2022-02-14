@@ -1,11 +1,13 @@
-const mongoose = require('mongoose');
+const db = require('mongoose');
+
+db.Promise = global.Promise;
 
 const dbConnection = async () => {
     
 
     try {
 
-        await mongoose.connect(process.env.BD_CNN, {
+        await db.connect(process.env.BD_CNN, {
             useNewUrlParser: true,
             useUnifiedTopology: true,      
         });

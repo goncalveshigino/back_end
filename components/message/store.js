@@ -1,13 +1,16 @@
 
+const Model = require('./model');
 
 
 
 function addMessage(message) {
-   list.push(message);
+   const myMessage = new Model(message);
+   myMessage.save();
 }
 
-function getMessages(){
-    return list;
+async function getMessages(){
+  const messages =  await Model.find();
+  return messages;
 }
 
 module.exports = {
