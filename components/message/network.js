@@ -31,4 +31,17 @@ router.post('/', function (req,res){
  });
 
 
+ router.patch('/:id', function(req,res) {
+    controller.updateMessage(req.params.id, req.body.message)
+      .then((data) =>{
+        response.success(req,res, data,200)
+      })
+      .catch( e => {
+         response.error(req,res, 'Algo de errado! ): Tente novamente', 500,e)
+      })
+
+  //  res.send('OK')
+ })
+
+
  module.exports = router;
