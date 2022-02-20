@@ -11,7 +11,7 @@ function addMessage(message) {
 
 
  function getMessages(filterUser) {
-    return new Promise((resolve,reject) =>{
+    return new Promise((resolve,reject) => {
       let filter = {};
       if (filterUser !== null) {
          filter = { user: filterUser }
@@ -26,7 +26,7 @@ function addMessage(message) {
               resolve(populated);
           });
     
-    })
+    });
  
 }
 
