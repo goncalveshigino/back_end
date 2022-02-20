@@ -8,10 +8,12 @@ function addMessage(message) {
    myMessage.save();
 }
 
+
 async function getMessages(){
   const messages =  await Model.find();
   return messages;
 }
+
 
 async function updateText(id,message){
    const foundmessage = await Model.findOne({
@@ -23,6 +25,7 @@ async function updateText(id,message){
 
   return newMessage;
 }
+
 
 module.exports = {
    add: addMessage,

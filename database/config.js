@@ -1,6 +1,5 @@
 const db = require('mongoose');
 
-db.Promise = global.Promise;
 
 const dbConnection = async () => {
     
