@@ -5,9 +5,9 @@ const router = express.Router();
 
 
 
-
 router.get('/', function (req,res){
-  controller.getMessages()
+  const filterMessages = req.query.user || null;
+  controller.getMessages(filterMessages)
      .then((messageList) => {
        response.success(req,res,messageList, 200);
      })
@@ -15,6 +15,7 @@ router.get('/', function (req,res){
        response.error(req,res, 'Unexpected Error', 500, e);
      });
 });
+
 
 
 
