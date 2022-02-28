@@ -23,3 +23,6 @@ router.get('/:userId', function(req,res){
          response.error(req,res, 'Internal error', 500, err);
      })
 });
+
+
+module.exports = router

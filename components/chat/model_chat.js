@@ -1,11 +1,18 @@
+const { Schema, model } = require('mongoose');
 
-const Schema = mongoose.Schema;
 
 const mySchema = new Schema({
 
-    users: [
+
+    users: {
         type: Schema.ObjectId,
         ref: 'User'
-    ]
+    }
+      
 
 });
+
+
+
+module.exports = model('Chat', mySchema);
+
