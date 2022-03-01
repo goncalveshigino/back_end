@@ -18,6 +18,6 @@ function listChats(userId){
 }
 
 module.exports = {
-    add: addChat,
-    list: listChats
+    addChat,
+    listChats
 }
