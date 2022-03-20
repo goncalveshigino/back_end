@@ -30,7 +30,6 @@ function addMessage(chat, user,message, file){
     
     resolve(fullMessage);
   })
-
 }
 
 
@@ -49,9 +48,9 @@ function getMessages(filterUser){
             return false;
         }
 
-     const result = await store.updateText(id, message);
+    //  const result = await store.updateText(id, message);
      
-     resolve(result); 
+    //  resolve(result); 
     })
 }
 
